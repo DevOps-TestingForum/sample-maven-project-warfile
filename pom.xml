@@ -1,23 +1,49 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>com.mycompany.app</groupId>
   <artifactId>my-app</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>my-app</name>
   <url>https://maven.apache.org</url>
+
   <dependencies>
+    <!-- JUnit for Testing -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <version>5.10.2</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- JAX-RS API Dependency -->
+    <dependency>
+      <groupId>javax.ws.rs</groupId>
+      <artifactId>javax.ws.rs-api</artifactId>
+      <version>2.1.1</version> <!-- Choose the appropriate version -->
+    </dependency>
+
+    <!-- Jersey JAX-RS Implementation -->
+    <dependency>
+      <groupId>org.glassfish.jersey.core</groupId>
+      <artifactId>jersey-server</artifactId>
+      <version>2.34</version> <!-- Use the latest stable version -->
+    </dependency>
+
+    <!-- Gson Dependency for JSON Processing -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.9</version> <!-- Latest stable version -->
+    </dependency>
   </dependencies>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
   <build>
     <pluginManagement>
       <plugins>
@@ -31,6 +57,7 @@
         </plugin>
       </plugins>
     </pluginManagement>
+
     <plugins>
       <plugin>
         <!-- Build an executable JAR -->
@@ -47,6 +74,7 @@
           </archive>
         </configuration>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
