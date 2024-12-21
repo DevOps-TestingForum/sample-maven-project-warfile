@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: my-app-container
-        image: my-repo/my-app:latest  # This will be replaced dynamically
+        image: verbose2001/test:11
         ports:
         - containerPort: 80
